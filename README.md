@@ -14,7 +14,7 @@ PHPExcel导入导出工具
 
 
 ## 使用方式
-···
+```php
 header("content-type:text/html;charset=utf-8");
 require_once 'api/Excel.php';
 /* 封装数据（一般从数据库查询，json数据或者数组都可以） */
@@ -22,4 +22,4 @@ $headerRow=['a1','b1','c1','d1'];
 $dataRow=[['a','b','c','d'],['a','b','c','d'],['a','b','c','d'],['a','b','c','d'],['a','b','c','d'],['a','b','c','d']];
 
 echo Excel::export($headerRow, $dataRow, $exportName = "文件名称1", $exportFileType = "xlsx", $sheetTitle = "sheet1", $exportType = 2, $template = 'template.xls');
-···
+```
